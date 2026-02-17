@@ -1,0 +1,13 @@
+name: ManhuntCompass
+main: _p3c.SpigotPlugins.minecraftManhunt.minecraftManhunt
+version: 1.0.0
+api-version: 1.21.11
+commands:
+  speedrunner:
+    description: Manage the speedrunner
+    usage: /speedrunner add <playername> or /speedrunner remove <playername>
+  hunter:
+    description: Manage hunters
+    usage: /hunter add <playername> or /hunter remove <playername>
+  compass:
+    description: Show info about the compass

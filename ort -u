@@ -1,0 +1,42 @@
+[33mcommit 6940b8af9755f468129d7960d45677c5ae27b580[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author:     p3c-dev <262194111+p3c-dev@users.noreply.github.com>
+AuthorDate: Wed Feb 18 02:07:11 2026 +0600
+Commit:     p3c-dev <262194111+p3c-dev@users.noreply.github.com>
+CommitDate: Wed Feb 18 02:07:11 2026 +0600
+
+    Initial commit - MinecraftManhunt plugin
+
+ .idea/.gitignore                                   |   3 [32m+++[m
+ .idea/compiler.xml                                 |  13 [32m+++++++++++[m
+ .idea/copyright/MIT_License.xml                    |   6 [32m+++++[m
+ .idea/encodings.xml                                |   7 [32m++++++[m
+ .idea/jarRepositories.xml                          |  25 [32m+++++++++++++++++++++[m
+ .idea/misc.xml                                     |  14 [32m++++++++++++[m
+ .idea/modules.xml                                  |   8 [32m+++++++[m
+ .idea/vcs.xml                                      |   6 [32m+++++[m
+ .../minecraftManhunt/minecraftManhunt$1.class      | Bin [31m0[m -> [32m793[m bytes
+ .../minecraftManhunt/minecraftManhunt.class        | Bin [31m0[m -> [32m13726[m bytes
+ target/classes/config.yml                          |   1 [32m+[m
+ target/classes/plugin.yml                          |  13 [32m+++++++++++[m
+ target/maven-archiver/pom.properties               |   3 [32m+++[m
+ .../compile/default-compile/createdFiles.lst       |   2 [32m++[m
+ .../compile/default-compile/inputFiles.lst         |   1 [32m+[m
+ target/minecraftmanhunt-1.0.0.jar                  | Bin [31m0[m -> [32m9792[m bytes
+ target/original-minecraftmanhunt-1.0.0.jar         | Bin [31m0[m -> [32m9546[m bytes
+ 17 files changed, 102 insertions(+)
+
+[33mcommit b629290058cc08cc384399cbc9832015859b649f[m
+Author:     p3c-dev <62194111+p3c-dev@users.noreply.github.com>
+AuthorDate: Wed Feb 18 01:15:56 2026 +0600
+Commit:     p3c-dev <262194111+p3c-dev@users.noreply.github.com>
+CommitDate: Wed Feb 18 01:59:56 2026 +0600
+
+    Test version 1.0.0 (Original)
+
+ README.md                                          |   3 [32m+[m
+ minecraftmanhunt.iml                               |  14 [32m+[m
+ pom.xml                                            |  68 [32m+++++[m
+ .../minecraftManhunt/minecraftManhunt.java         | 296 [32m+++++++++++++++++++++[m
+ src/main/resources/config.yml                      |   1 [32m+[m
+ src/main/resources/plugin.yml                      |  13 [32m+[m
+ 6 files changed, 395 insertions(+)
