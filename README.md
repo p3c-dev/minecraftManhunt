@@ -1,24 +1,21 @@
-Hi! This is a simple minecraft manhunt plugin!
-
-
-#### This a simple Minecraft Manhunt (and Minecraft Survivalist vs Hitmen) plugin inspired by @dream's popular Minecraft Manhunt series!
-
-
-Dream's youtube channel: https://www.youtube.com/@dream
-
-
-
-# Simple Minecraft Manhunt Plugin 
-### For Minecraft Spigot/Paper/Purpur version 1.21.11
+# Minecraft Manhunt Plugin
 
 ## Overview
 
-This plugin provides a lightweight and customizable Minecraft Manhunt experience!
+This plugin provides a lightweight and customizable Minecraft Manhunt experience with two gameplay modes:
+
+1. **Classic Manhunt** – Speedrunner vs Hunters.
+2. **Hitmen Mode** – Survivalist vs Hitmen, where the goal is survival instead of completing the game.
+
 The plugin is designed to be minimal, fast, and easy to use without unnecessary complexity.
 
-In this mode, one player is assigned as the **speedrunner**, while other players act as **hunters**.
+---
 
-Note: There can be only ***one*** speedrunner
+## Core Gameplay
+
+### Classic Manhunt
+
+In this mode, one player is assigned as the **speedrunner**, while other players act as **hunters**.
 
 The hunters attempt to track and eliminate the speedrunner using a lodestone compass that tracks the speedrunner’s last known location.
 
@@ -27,9 +24,36 @@ Key mechanics:
 * Only one speedrunner can be set at a time.
 * Hunters receive a compass used to track the speedrunner.
 * The compass updates only when the hunter right-clicks it.
-* If the speedrunner changes dimensions, the compass does not update until they return. This is how Dream described the compass worked in his Manhunt Revival videos! _(you can change this behaviour in **config.yml**)_
+* If the speedrunner changes dimensions, the compass does not update until they return. This is how Dream described the compass worked in his Manhunt Revival videos! _(you can change this behaviour in config.yml)_
 * Hunters automatically regain the compass upon death.
 * No extra unnecessary features like blindness or slowness for hunters when manhunt starts, just a simple plugin to play with your friends!
+
+---
+
+## Hitmen Mode
+
+Hitmen Mode changes the gameplay from a race into a survival challenge.
+
+Instead of beating the game, the **survivalist** must stay alive for a specified amount of time.
+
+### Objectives
+
+**Survivalist:**
+
+* Survive until the countdown timer reaches zero.
+
+**Hitmen:**
+
+* Kill the survivalist once before the timer ends.
+
+### Features
+
+* The survivalist receives a permanent glowing effect.
+* The glowing effect is reapplied if removed.
+* A global timer is shown to all players.
+* The timer starts only when the survivalist moves or attacks after being ready.
+* No start announcements are displayed.
+* Win conditions are automatic.
 
 ---
 
@@ -73,7 +97,52 @@ Displays information about the current tracking target.
 This command is only available to hunters.
 
 ---
-## Miscellaneous 
+
+## Hitmen Mode Commands
+
+### `/hitmen-mode ON <time>`
+
+Enables Hitmen Mode and sets the survival timer.
+
+Parameters:
+
+* `<time>` is provided in seconds.
+
+Behavior:
+
+* Displays the countdown timer to all players.
+* The timer remains paused until the survivalist becomes active.
+
+---
+
+### `/hitmen-mode OFF`
+
+Disables Hitmen Mode and clears any existing timer.
+
+---
+
+### `/hitmen-mode RESET`
+
+Resets all Hitmen Mode settings and turns the mode off.
+
+---
+
+### `/survivalist-ready`
+
+Marks the survivalist as ready.
+
+The timer will begin when:
+
+* The survivalist moves.
+* The survivalist attacks a hitman.
+
+Restrictions:
+
+* Only the survivalist can use this command.
+
+---
+
+## Miscellaneous
 
 ### `/Minecraft-Manhunt reload`
 
@@ -86,6 +155,23 @@ Reloads the plugin and all settings.
 Displays the current server and plugin version.
 
 ---
+
+## config.yml
+
+Configuration for the Manhunt Plugin
+
+Currently, there is only 1 option here:
+
+`hunter-compass-reset-when-no-players-to-track: true` (default)
+* If set to true, then if player is in a different dimension and the compass shows **"No players to track!"**, the compass will reset (lose its locked location) and it will just start spinning around.
+
+This makes it more challenging for the hunters too if they die and the speedrunner is in a different dimension, or if they right-click the compass when speedrunner is in a different dimension
+
+`hunter-compass-reset-when-no-players-to-track: false`
+* If set to false, then it disables this feature entirely, and the compass always stays locked to the last position.
+
+---
+
 ## Requirements
 
 * Spigot, Paper or Purpur Minecraft server

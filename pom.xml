@@ -6,7 +6,7 @@
 
     <groupId>_p3c.SpigotPlugins</groupId>
     <artifactId>minecraftmanhunt</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>minecraftmanhunt</name>

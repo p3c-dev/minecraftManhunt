@@ -1,6 +1,6 @@
-name: ManhuntCompass
+name: minecraftManhunt
 main: _p3c.SpigotPlugins.minecraftManhunt.minecraftManhunt
-version: 1.0.0
+version: 1.0.1
 api-version: 1.21.11
 commands:
   speedrunner:
@@ -11,3 +11,12 @@ commands:
     usage: /hunter add <playername> or /hunter remove <playername>
   compass:
     description: Show info about the compass
+  hitmen-mode:
+    description: Enable, disable or reset Hitmen Mode
+    usage: /hitmen-mode <ON|OFF|RESET> [time]
+  survivalist-ready:
+    description: Marks the survivalist as ready to start the timer
+    usage: /survivalist-ready
+  Minecraft-Manhunt:
+    description: Main administration command for Minecraft Manhunt
+    usage: /Minecraft-Manhunt <reload|version>
